@@ -7,7 +7,8 @@ auto main(int argc, char* argv[]) -> int
         return 1;
     }
     //kod
-    
+   int liczba = std::stoi(argv[1]);
+   std::cout << "siema" << liczba;
    
     return 0;
 }
