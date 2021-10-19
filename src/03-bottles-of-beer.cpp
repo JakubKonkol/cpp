@@ -7,6 +7,6 @@ auto main(int argc, char* argv[]) -> int
         return 1;
     }
 
-    auto const haslo = std::string{argv[1]};
-    std::cout << haslo;
-}
+    auto const Bottles = std::string{argv[1]};
+    std::cout << Bottles;
+
