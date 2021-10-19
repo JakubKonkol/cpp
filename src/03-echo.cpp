@@ -1,4 +1,4 @@
-//Jakub Konkol
+//Jakub Konkol//
 #include <iostream>
 #include <string>
 
