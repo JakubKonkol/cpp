@@ -9,5 +9,5 @@ auto main(int argc, char* argv[]) -> int
     int x = 1;
     int z = 5;
     auto const Bottles = std::string{argv[1]};
-    std::cout << Bottles;
+    std::cout << Bottles + 1;
 
