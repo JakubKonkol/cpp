@@ -13,10 +13,10 @@ auto main(int argc, char* argv[]) -> int
     if (n%5!=0 && n%3!=0){
         std::cout << n << "\n";
         }
-    if (n%3 == 0){
+    if (n%3 == 0 && n%5 != 0){
         std::cout << n <<" Fizz \n";    
         }
-    else if (n%5 == 0){
+    else if (n%5 == 0 && n%3 != 0){
         std::cout << n<< " Buzz \n";
     }
     else if (n%3== 0 && n%5==0){
