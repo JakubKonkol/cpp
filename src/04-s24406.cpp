@@ -1,27 +1,16 @@
+
 #include <iostream>
 #include <string>
 #include <s24406/student.h>
+auto Student::to_string() const -> std::string{
+    return imie+" " + nazwisko+" "+std::to_string(indeks)+" "+std::to_string(semestr)+" " + std::to_string(srednia);
+}
 auto main() -> int 
 {
-	Student jakub = {
-          "Jakub"     // imię
-        , "Konkol"   // nazwisko
-        , 24406       // numer indeksu
-        , 1             // semestr
-        , 6.0        // średnia ocen
-    };
-    /* auto Student::to_string() const -> std::string {
-            std::cout << jakub.imie << ", ";
-            std::cout << jakub.nazwisko << ", ";
-            std::cout << jakub.indeks << ", ";
-            std::cout << jakub.semestr <<", ";
-            std::cout << jakub.srednia <<", ";
-
-        };
-        */
-    //Student::to_string();
-    std::cout << jakub.indeks;
+    //uzycie: Student nazwa_ucznia = {"imie", "nazwisko", indeks, semestr, srednia ocen}  
+    Student jakub = {"jakub", "Konkol", 24406, 1, 6.0};
+    std::cout << jakub.to_string();
+        
    
-  
-    
 }
+
