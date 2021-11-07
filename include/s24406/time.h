@@ -8,5 +8,6 @@ struct Time{
     auto next_hour() const -> void;
     auto next_minute() const -> void;
     auto next_second() const -> void;
+    auto IsValid() const -> bool;
 
 };
