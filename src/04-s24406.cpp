@@ -8,9 +8,9 @@ auto Student::to_string() const -> std::string{
 auto main() -> int 
 {
     //uzycie: Student nazwa_ucznia = {"imie", "nazwisko", indeks, semestr, srednia ocen}  
-    Student jakub = {"jakub", "Konkol", 24406, 1, 6.0};
+    Student jakub = {"jakub", "Konkol", 24406, 1, 6.0};  
     std::cout << jakub.to_string();
-        
-   
+
+    
 }
 
