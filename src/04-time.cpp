@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <s24406/time.h>
+//funkcja sprawdzajaca czy godzina jest poprawnie podana
 auto Time::IsValid() const -> bool{
     if ((HH < 0 || HH >=24) || (SS < 0 || SS>59) || (MM < 0 || MM>59)){
         return false;
@@ -9,7 +10,7 @@ auto Time::IsValid() const -> bool{
         return true;
     }
 }
-//enum tu bedzie
+// enum, timeofday itp
 auto Time::Time_of_day() -> Time::time_of_day{
     if(HH>6 && HH<=12){
         return time_of_day::rano;
@@ -35,7 +36,7 @@ auto Time::to_string(time_of_day) -> std::string{
         return "cos nie tak";
     }
 } 
-//next_etc()
+// funkcje next itp
 auto Time::next_hour() -> void{
     if(HH < 23){
         //HH=00 MM=00 SS=00
@@ -105,14 +106,14 @@ auto Time::to_string() const -> std::string{
 auto main() -> int {
     //uzycie Time nazwa = {godz, min, sek}
     Time TestTime = {0, 0, 0};
-    std::cout << TestTime.to_string();
+    std::cout << "Godzina: " << TestTime.to_string();
     TestTime.next_hour();
-    std::cout << TestTime.to_string();
+    std::cout << "Godzina: " << TestTime.to_string();
     TestTime.next_minute();
-    std::cout << TestTime.to_string();
+    std::cout << "Godzina: " << TestTime.to_string();
     TestTime.next_second();
-    std::cout << TestTime.to_string();
-    //std::cout << TestTime.to_string(TestTime.time_of_day);
+    std::cout << "Godzina: " << TestTime.to_string();
+    std::cout << "Pora dnia: " << TestTime.to_string(Time::time_of_day()) << "\n";
     
 
     
