@@ -259,13 +259,13 @@ auto main() -> int {
     std::cout <<"\n";
     std::cout << "Pora dnia: " << TestTime.to_string(Time::time_of_day()) << "\n";
     std::cout <<"\n";
-    auto czas = Time(22, 30, 35);
+    
+    auto czas = Time(TestTime.HH,TestTime.MM,TestTime.SS);
     std::cout << "godzina przed dodaniem: " << czas.to_string();
     auto dodawanie = czas + Time(1,0,30);
     std::cout <<"godzina po dodaniu: "<< dodawanie.to_string();
-    auto czasO = Time(22, 30, 35);
     std::cout << "godzina przed odjeciem: " << czas.to_string();
-    auto odejmowanie = czasO - Time(1,0,30);
+    auto odejmowanie = czas - Time(1,0,30);
     std::cout << "godzina po odjeciu: " << odejmowanie.to_string(); 
     std::cout <<"\n";
     std::cout << "Godzina: " << TestTime.to_string();
