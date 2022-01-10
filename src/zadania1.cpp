@@ -1,7 +1,13 @@
 #include <iostream>
 #include <string>
-auto is_palidrome() -> bool{
-    
+auto is_palidrome(std::string slowo) -> bool{
+    std::string slowo1 = slowo;
+    reverse(slowo1.begin(), slowo1.end());
+
+    if(slowo==slowo1){
+        return true;
+    }
+    else{return false;}
 }
 auto box_print(std::string pierwszy, std::string drugi, std::string trzeci, std::string czwarty, std::string piaty) -> void{
     for(int i=0;i<9;i++){
@@ -111,6 +117,13 @@ auto zadanie8()-> void{
     return;
 }
 auto zadanie9()-> void{
+    
+    if (is_palidrome("otomoto")){
+        std::cout << "true";
+    }
+    else{
+        std::cout << "false";
+    }
     return;
 }
 auto zadanie10()-> void{
