@@ -1,5 +1,23 @@
 #include <iostream>
 #include <string>
+auto is_palidrome() -> bool{
+    
+}
+auto box_print(std::string pierwszy, std::string drugi, std::string trzeci, std::string czwarty, std::string piaty) -> void{
+    for(int i=0;i<9;i++){
+        std::cout << "*";
+    }
+    std::cout << "\n";
+    std::cout << "* " << pierwszy << " *" << "\n";
+    std::cout << "* " << drugi << " *" << "\n";
+    std::cout << "* " << trzeci << " *" << "\n";
+    std::cout << "* " << czwarty << " *" << "\n";
+    std::cout << "* " << piaty << " *" << "\n";
+
+    for(int i=0;i<9;i++){
+        std::cout << "*";
+    }
+}
 auto is_even(int x) -> bool{
 if(x%2==0){
     return true;
@@ -96,6 +114,7 @@ auto zadanie9()-> void{
     return;
 }
 auto zadanie10()-> void{
+    box_print("hello", "World", "in", "a", "frame");
     return;
 }
 auto main() -> int{
