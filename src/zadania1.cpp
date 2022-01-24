@@ -1,5 +1,27 @@
 #include <iostream>
 #include <string>
+int x;
+auto count_chars(std::string x, char y)->int{
+    int suma=0;
+    for(int i=0; i<x.size(); i++)
+    {
+        if(x[i]==y)
+        {
+            suma++;
+        }
+    }   
+    return suma;
+}
+auto is_divisible(int x,int y)->bool{
+    if(x%y==0)
+        return true;
+    return false;
+
+}
+bool is_even2(int x){
+    if(is_divisible(x,2))
+        return true;
+    return false;
 auto is_palidrome(std::string slowo) -> bool{
     std::string slowo1 = slowo;
     reverse(slowo1.begin(), slowo1.end());
@@ -108,9 +130,22 @@ auto zadanie5()-> void{
     return;
 }
 auto zadanie6()-> void{
+    std::cout<<"Podaj liczbe: ";
+    std::cin>>x;
+    if(is_even2(x)) std::cout<<"parzysta\n";
+    else std::cout<<"nieparzysta\n";
     return;
 }
 auto zadanie7()-> void{
+    int ile=0;
+    std::string wyraz;
+    char znak;
+    std::cout<<"Podaj wyraz: \n";
+    std::cin>>wyraz;
+    std::cout<<"Podaj szukany znak: \n";
+    std::cin>>znak;
+    ile=count_chars(wyraz,znak);
+    std::cout<<"Ilość znaków w wyrazie jest równa: "<<ile<<"\n";
     return;
 }
 auto zadanie8()-> void{
